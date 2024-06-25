@@ -1,0 +1,1 @@
+<script src="{{ asset('assets') }}/js/admin/cms.js"></script>

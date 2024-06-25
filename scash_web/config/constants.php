@@ -1,0 +1,19 @@
+<?php
+
+return [
+    'ADMIN_ROLE_ID' => 1,
+    'USER_ROLE_ID' => 4,
+    'MERCHANT_ROLE_ID' => 3,
+    'STATUS_PENDING' => 0,
+    'STATUS_ACTIVE' => 1,
+    'STATUS_INACTIVE' => 2,
+    'STATUS_KYC_VERIFICATION' => 3,
+    'STATIC_OTP' => 1234,
+    'OTP_PENDING' => 0,
+	'OTP_VERIFIED' => 1,
+    'CASHBACK_DEFAULT_TYPE' => 1,
+    'MERCHANT_CASHBACK_TYPE' => 2,
+    'BUSINESS_TYPE_SSN' => 1,
+    'BUSINESS_TYPE_EIN' => 2,
+
+];

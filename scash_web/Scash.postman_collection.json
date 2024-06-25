@@ -1,0 +1,2525 @@
+{
+	"info": {
+		"_postman_id": "7548b467-9ddb-4cdc-b62d-7a644971e7a7",
+		"name": "Scash",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32150953"
+	},
+	"item": [
+		{
+			"name": "API",
+			"item": [
+				{
+					"name": "Send Otp",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email_phone_number\":\"7027146412\",\n    \"country_code\":\"+91\",\n    \"type\":\"login\",\n    \"hashKey\":\"GJHGJHGJHG\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/send-otp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"send-otp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "send-referal-code",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone_number\": [\"+917027146412\",\"+917027146412\",\"+917027146412\"],\n    \"referal_code\":\"SCASH8475\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/send-referal-code",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"send-referal-code"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email_phone_number\":\"tonystark@gmail.com\",\n    \"password\": \"Admin@123\",\n    \"device_token\":\"234dsfdf\",\n    \"device_type\":\"IOS\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.101.221:8003/api/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"101",
+								"221"
+							],
+							"port": "8003",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "plaid-link-token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOWQ0Y2Q4ZmMxOGI4NGY4MDllOTgxYTRmM2YyYTA0OGQwOWMxOTM3MDJmMjUwNDVmODEwZDc2ZDMxYmMzOTkxMmU2NzdiNDM1NTdiZDFmN2MiLCJpYXQiOjE3MDY2MjU0NzIuNTkxMDY4LCJuYmYiOjE3MDY2MjU0NzIuNTkxMDcsImV4cCI6MTczODI0Nzg3Mi41ODUwMzUsInN1YiI6IjkiLCJzY29wZXMiOltdfQ.IiR_Uqd9iYeJCqVF5m2TBR3fGKlceFCsG6MINl7KyhSSUo9hqQWjwf2_6zyEn2Inh4mJff18t_f-FE45r5JVUIudgpDix65z0S55quvOb4-cnWjOhVyVRjf7FfKDBydBpOH30CtqlvnNiDtDRSs2u3Vlt-K7FDEUMoLpdpE9yeybQo3tdHftqVWvYVOmDHRB_65ZdB30WODWffDvLOMZAqb16pf-osdHY7XXNKTANGxRb6y05-faK7c8Ah79aOYaAQdQy24SOskk9w6GgWV9GESJoUMnu3ifycdEKDCTA6rz80ZEwMUx0EOAt0OunEIqtpWIN3_xofl9qW-RUhwGoiQ0360B6zXbtLEVKRJtrDss2rjrAqhctAjgV6zJebmyvYB5UKpr45PqRDWeF5HC_l1qOliQyArVg9yFki_JPs5RRiYJ4m8XXlZAZtKju9ZxZbQ_HPd392sN-97SwRmUN_48sg3FPNVF-KFoTr12rpojvPa1P90JMn0BoVYzHuYDAUaEF64V0DbHFIj6LkSjJk9V470o3_YSQqgM1dLm3WHFn3ZoXXmATPQg8eK8SHhMZuxAg80YDfg_ZeVPjB1j0aqqP86AsS9BxYngHB6Ohc7lG-WTIkjsHxkKVbB-HLVpyG__0cubqvozsHKc5dsWqOYMZUtPC49hPkSdTd7svy8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/plaid-link-token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"plaid-link-token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "plaid-access-token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjFiODA5YWU5YmEzZGUwMGY5MjVlNGNjNDhkMTY4M2FkODRiMjkwNzZkOWIyZjBjZjcxMmZhYTI5OTEzNjdhN2IyY2E0ZWI4OTExN2Y4YWQiLCJpYXQiOjE3MDYwODAzMTguMTQ2NTQ4LCJuYmYiOjE3MDYwODAzMTguMTQ2NTUxLCJleHAiOjE3Mzc3MDI3MTguMTQwOTE5LCJzdWIiOiIxMDciLCJzY29wZXMiOltdfQ.ao0nJT2P_phkyFW5Mcy5KA9lxxcaQM6pdw5Vlcuf-iUWEi_tWkwGDNEcDjmgWoUrs4mV-rgFdBO8-glk7LPVPvoqNYvroIIxSs5ZxeoajGwR671huco-ZTDszJoJaWALTYKV-YA04CMMZKqYjXNl16jr8MY5SibfgBY4cQ7cirNPvCSSD34a6cwBx2VBrDI6gJ0yVY6GFREPK1SbHq5g98TiPzrzzmg6_t8tf1O6CO0W0SOrPMCZCVuWSRFx34jPDSQIB8Arzr7urSYmwfKaLIdJKIyndvjOUz5BNLgcj6gj60VjJVbtE4odDHCCzKIu0L-HpUBHFLcqcUwt56JyLzJQWr_6imFtMwnQzxe5dGjOI9OeUMlQ_X_CrvMj165I4t6gQBDB8G1m_bh-vxI66CH8FlUGA-xTlXHeKiWoWXChbYtxqRDALmJLhwLBix0iTKot6UtXAOJJ3lChl6H1dv37t1MYSjsP_rXQhUZzeFLHun5xZrMHxCTgYdkv3WKDiKHiev08uFKJqwynODyiiqpu1iqo-skCyAzoOZtHMBCKvqPW5W6mx5RqpcgaG5rIEtbMMHX2x6udLmU--rJoPjJBmL7Wky1CEbXeA9tWz0Wb1owe7YpG5v0FNqKTue0-1FnHwqUH5U6hGHGtTV-WeqxAFwFpGQCRETlI7gWAV-0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"public_token\":\"public-sandbox-44f688e9-aaad-4dba-8c12-86291950fd8f\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/plaid-access-token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"plaid-access-token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-bank-account",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMjNlYzdiZmU4N2NlZTdjOWYxYmMzMTJjNmQ1OTMwMzU3OTc2OWFkNGMzYjdkMzgzZjFmNmRkNzllYjljODFmMTFkM2Q5MDU5NzhlYzQyNWYiLCJpYXQiOjE3MTA0MjE0NzAuNzk3Mzk5LCJuYmYiOjE3MTA0MjE0NzAuNzk3NDAzLCJleHAiOjE3NDE5NTc0NzAuNzgyNDY4LCJzdWIiOiIxMjYiLCJzY29wZXMiOltdfQ.RASU26bOIZB2igE1ULudIhWl1KQ6x6DAGcPhxEZIT929LyBcbK6rolIJ8F3eZx0vSx2pswkuzZgVfRO5vvSa_cJDaBKqJxfYW688dIdVKw81ZBLwYr418nYYX2_0cMsm8hhoEa8JST5txSYo4sA1iz9K6yNYE_QZ6qBxGnb4WbbzOKWFCHjQB5tW75GADg_fv0i91wgr8pB2LD6jCa3S0B95zYCOTww0yhGd4g97VrhVpFSuKuxCiVeKOpootF_rjfhKqyR4vzifGxkd5MyfTI6T337cSpPssUG8rm-06e-CCG4ZuibQU0AtiG1ZEr0defhDa6qzkykHH4jg2a7PAEJMIVnlI8OGUDMUuhQ1IGjBGcGReXw0xgjqdRXfSozFUG_bLXOjTSIPFYUJM103RhrDe_wWfMFTo_IYfbVHiXtFXDJgqb9OJ24OAaEw5pzVchkK-c8h6h5o7F-p1gPINrmuBZlI4Z-8ifLvSsSi-SN7XBsgi8jBe8KmTn3SVvb2qPk2iPE6KMyov27r4fR7VlVpJheZwXGvtwqEqwVc9L_9pTBd7kjAMrUuplhQH0cqEImNEZCQX04XnmYrC99D8O7X-OskWe8kmgwMpIroHfgIrlL__oQjIR6wic7YR_VtIbX2aHU_WT8MPh4Hzi18nPrr9KUu6feq5_0pcUBbD7Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"funding_source\":\"daf5f72f-d7bd-4f32-8ea3-b076c6e66fb8\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/remove-bank",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"remove-bank"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove-bank",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMjNlYzdiZmU4N2NlZTdjOWYxYmMzMTJjNmQ1OTMwMzU3OTc2OWFkNGMzYjdkMzgzZjFmNmRkNzllYjljODFmMTFkM2Q5MDU5NzhlYzQyNWYiLCJpYXQiOjE3MTA0MjE0NzAuNzk3Mzk5LCJuYmYiOjE3MTA0MjE0NzAuNzk3NDAzLCJleHAiOjE3NDE5NTc0NzAuNzgyNDY4LCJzdWIiOiIxMjYiLCJzY29wZXMiOltdfQ.RASU26bOIZB2igE1ULudIhWl1KQ6x6DAGcPhxEZIT929LyBcbK6rolIJ8F3eZx0vSx2pswkuzZgVfRO5vvSa_cJDaBKqJxfYW688dIdVKw81ZBLwYr418nYYX2_0cMsm8hhoEa8JST5txSYo4sA1iz9K6yNYE_QZ6qBxGnb4WbbzOKWFCHjQB5tW75GADg_fv0i91wgr8pB2LD6jCa3S0B95zYCOTww0yhGd4g97VrhVpFSuKuxCiVeKOpootF_rjfhKqyR4vzifGxkd5MyfTI6T337cSpPssUG8rm-06e-CCG4ZuibQU0AtiG1ZEr0defhDa6qzkykHH4jg2a7PAEJMIVnlI8OGUDMUuhQ1IGjBGcGReXw0xgjqdRXfSozFUG_bLXOjTSIPFYUJM103RhrDe_wWfMFTo_IYfbVHiXtFXDJgqb9OJ24OAaEw5pzVchkK-c8h6h5o7F-p1gPINrmuBZlI4Z-8ifLvSsSi-SN7XBsgi8jBe8KmTn3SVvb2qPk2iPE6KMyov27r4fR7VlVpJheZwXGvtwqEqwVc9L_9pTBd7kjAMrUuplhQH0cqEImNEZCQX04XnmYrC99D8O7X-OskWe8kmgwMpIroHfgIrlL__oQjIR6wic7YR_VtIbX2aHU_WT8MPh4Hzi18nPrr9KUu6feq5_0pcUBbD7Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"access_token\":\"access-sandbox-f37d2ea2-c720-4091-9cde-9b477ef6d6b9\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/get-bank-account",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"get-bank-account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-plaid-processor-dwolla",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjFiODA5YWU5YmEzZGUwMGY5MjVlNGNjNDhkMTY4M2FkODRiMjkwNzZkOWIyZjBjZjcxMmZhYTI5OTEzNjdhN2IyY2E0ZWI4OTExN2Y4YWQiLCJpYXQiOjE3MDYwODAzMTguMTQ2NTQ4LCJuYmYiOjE3MDYwODAzMTguMTQ2NTUxLCJleHAiOjE3Mzc3MDI3MTguMTQwOTE5LCJzdWIiOiIxMDciLCJzY29wZXMiOltdfQ.ao0nJT2P_phkyFW5Mcy5KA9lxxcaQM6pdw5Vlcuf-iUWEi_tWkwGDNEcDjmgWoUrs4mV-rgFdBO8-glk7LPVPvoqNYvroIIxSs5ZxeoajGwR671huco-ZTDszJoJaWALTYKV-YA04CMMZKqYjXNl16jr8MY5SibfgBY4cQ7cirNPvCSSD34a6cwBx2VBrDI6gJ0yVY6GFREPK1SbHq5g98TiPzrzzmg6_t8tf1O6CO0W0SOrPMCZCVuWSRFx34jPDSQIB8Arzr7urSYmwfKaLIdJKIyndvjOUz5BNLgcj6gj60VjJVbtE4odDHCCzKIu0L-HpUBHFLcqcUwt56JyLzJQWr_6imFtMwnQzxe5dGjOI9OeUMlQ_X_CrvMj165I4t6gQBDB8G1m_bh-vxI66CH8FlUGA-xTlXHeKiWoWXChbYtxqRDALmJLhwLBix0iTKot6UtXAOJJ3lChl6H1dv37t1MYSjsP_rXQhUZzeFLHun5xZrMHxCTgYdkv3WKDiKHiev08uFKJqwynODyiiqpu1iqo-skCyAzoOZtHMBCKvqPW5W6mx5RqpcgaG5rIEtbMMHX2x6udLmU--rJoPjJBmL7Wky1CEbXeA9tWz0Wb1owe7YpG5v0FNqKTue0-1FnHwqUH5U6hGHGtTV-WeqxAFwFpGQCRETlI7gWAV-0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"access_token\":\"access-sandbox-d171ccd6-5972-4c46-82e7-396b181fbd73\",\n    \"account_id\" : \"d171ccd659724c4682e7396b181fbd73\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/get-plaid-processor-dwolla",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"get-plaid-processor-dwolla"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "plaid-dwolla-funding-create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOWQ0Y2Q4ZmMxOGI4NGY4MDllOTgxYTRmM2YyYTA0OGQwOWMxOTM3MDJmMjUwNDVmODEwZDc2ZDMxYmMzOTkxMmU2NzdiNDM1NTdiZDFmN2MiLCJpYXQiOjE3MDY2MjU0NzIuNTkxMDY4LCJuYmYiOjE3MDY2MjU0NzIuNTkxMDcsImV4cCI6MTczODI0Nzg3Mi41ODUwMzUsInN1YiI6IjkiLCJzY29wZXMiOltdfQ.IiR_Uqd9iYeJCqVF5m2TBR3fGKlceFCsG6MINl7KyhSSUo9hqQWjwf2_6zyEn2Inh4mJff18t_f-FE45r5JVUIudgpDix65z0S55quvOb4-cnWjOhVyVRjf7FfKDBydBpOH30CtqlvnNiDtDRSs2u3Vlt-K7FDEUMoLpdpE9yeybQo3tdHftqVWvYVOmDHRB_65ZdB30WODWffDvLOMZAqb16pf-osdHY7XXNKTANGxRb6y05-faK7c8Ah79aOYaAQdQy24SOskk9w6GgWV9GESJoUMnu3ifycdEKDCTA6rz80ZEwMUx0EOAt0OunEIqtpWIN3_xofl9qW-RUhwGoiQ0360B6zXbtLEVKRJtrDss2rjrAqhctAjgV6zJebmyvYB5UKpr45PqRDWeF5HC_l1qOliQyArVg9yFki_JPs5RRiYJ4m8XXlZAZtKju9ZxZbQ_HPd392sN-97SwRmUN_48sg3FPNVF-KFoTr12rpojvPa1P90JMn0BoVYzHuYDAUaEF64V0DbHFIj6LkSjJk9V470o3_YSQqgM1dLm3WHFn3ZoXXmATPQg8eK8SHhMZuxAg80YDfg_ZeVPjB1j0aqqP86AsS9BxYngHB6Ohc7lG-WTIkjsHxkKVbB-HLVpyG__0cubqvozsHKc5dsWqOYMZUtPC49hPkSdTd7svy8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"access_token\":\"g1aG5caWSYPbaQ1Xrib7DYpz7s6LzTo7p7fjgO6ABOpXGnoBem\",  //plaid access token\n    \"plaid_processor_token\":\"processor-sandbox-ae7488d0-a8e3-45a9-af62-550d31b29ae3\",\n    \"bank_name\" : \"Max Tex Bank checking\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/plaid-dwolla-funding-create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"plaid-dwolla-funding-create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "dwolla-access-token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNzJiY2MwY2Y0ZDFjM2VhMGQxN2NmYmNhMTA4MjNjZjk1ZTg1YmIwNGYwNmMzZTY5NzVhMGRmYTNkYjJhOTM3Mjg3ODZmM2JjNzYzMTMzODIiLCJpYXQiOjE3MDYxNjA3NjYuNzI4ODcyLCJuYmYiOjE3MDYxNjA3NjYuNzI4ODc3LCJleHAiOjE3Mzc3ODMxNjYuNzExODg4LCJzdWIiOiIxMDciLCJzY29wZXMiOltdfQ.ZBWwefH0QpEfwYOYy9ZJ4Yf8Gx6UbO7cQhNehs_GOqIPe9WB2aRtLTzu-XMPzcObjcnqZuIdQUOowup9I1fK4QqcXSAi67tHPtsCVU7AioTa8vsnNuqtemcMqLwIgkBkWZa5My2ytlOWXaP6rBEl_9gXeHdUcYM6lbonqcxOA4IAiZa_ANTud_fxT2uxT_pvhY0iDNA4BokaeTKMV0mbpeICAi5YfKfJoWeO_qW9U__oL_ndlX4gAvd1X7ZaGzTCk7nSTKjhCxcpTU_nWYqKSt-NcNWtYwezBWm81t4hAVTPjYCzZNKxm6ZJrfQOM__5U6K88VjgcATn7dskpkYAkieWQ749PNM7uq5q23cFNOPWRm_gTl0ggycdNjn8-GhN3CMpDZOs4TXtAg6oepKSYN0oP3AoWDg1fmSbD0BaVv_hhUZx80AcAe8kh_EjNQs69vrD6PnhI4aizTgQ3YTUY-WX2nTAU7ORKyGlSO4EDQxO_zLORuJn-_3QKnt26_R50KxFyPg8_211Tb6SzWLmTueH4bQPusIfgDdaMliRj8vbmeKgSGJDUfwmoSwOvkvc8nRbcMY9W8DyW7Xoh3IfYJHYbHLemF7w7KOK7oDtw38bYgKhH4mWKeBSiLvK6WapQt7OpTeTO-WykppTXlQKcBYptyTtxeD9SH4y6QrKTY0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/dwolla-access-token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"dwolla-access-token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "on-demand-authorizations",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNzJiY2MwY2Y0ZDFjM2VhMGQxN2NmYmNhMTA4MjNjZjk1ZTg1YmIwNGYwNmMzZTY5NzVhMGRmYTNkYjJhOTM3Mjg3ODZmM2JjNzYzMTMzODIiLCJpYXQiOjE3MDYxNjA3NjYuNzI4ODcyLCJuYmYiOjE3MDYxNjA3NjYuNzI4ODc3LCJleHAiOjE3Mzc3ODMxNjYuNzExODg4LCJzdWIiOiIxMDciLCJzY29wZXMiOltdfQ.ZBWwefH0QpEfwYOYy9ZJ4Yf8Gx6UbO7cQhNehs_GOqIPe9WB2aRtLTzu-XMPzcObjcnqZuIdQUOowup9I1fK4QqcXSAi67tHPtsCVU7AioTa8vsnNuqtemcMqLwIgkBkWZa5My2ytlOWXaP6rBEl_9gXeHdUcYM6lbonqcxOA4IAiZa_ANTud_fxT2uxT_pvhY0iDNA4BokaeTKMV0mbpeICAi5YfKfJoWeO_qW9U__oL_ndlX4gAvd1X7ZaGzTCk7nSTKjhCxcpTU_nWYqKSt-NcNWtYwezBWm81t4hAVTPjYCzZNKxm6ZJrfQOM__5U6K88VjgcATn7dskpkYAkieWQ749PNM7uq5q23cFNOPWRm_gTl0ggycdNjn8-GhN3CMpDZOs4TXtAg6oepKSYN0oP3AoWDg1fmSbD0BaVv_hhUZx80AcAe8kh_EjNQs69vrD6PnhI4aizTgQ3YTUY-WX2nTAU7ORKyGlSO4EDQxO_zLORuJn-_3QKnt26_R50KxFyPg8_211Tb6SzWLmTueH4bQPusIfgDdaMliRj8vbmeKgSGJDUfwmoSwOvkvc8nRbcMY9W8DyW7Xoh3IfYJHYbHLemF7w7KOK7oDtw38bYgKhH4mWKeBSiLvK6WapQt7OpTeTO-WykppTXlQKcBYptyTtxeD9SH4y6QrKTY0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"access_token\":\"lzGYLU236MkdZNXOjToD2BY7hpSC7YKpOyE1O0AolRd2ihSwvY\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/on-demand-authorizations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"on-demand-authorizations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-customer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNzJiY2MwY2Y0ZDFjM2VhMGQxN2NmYmNhMTA4MjNjZjk1ZTg1YmIwNGYwNmMzZTY5NzVhMGRmYTNkYjJhOTM3Mjg3ODZmM2JjNzYzMTMzODIiLCJpYXQiOjE3MDYxNjA3NjYuNzI4ODcyLCJuYmYiOjE3MDYxNjA3NjYuNzI4ODc3LCJleHAiOjE3Mzc3ODMxNjYuNzExODg4LCJzdWIiOiIxMDciLCJzY29wZXMiOltdfQ.ZBWwefH0QpEfwYOYy9ZJ4Yf8Gx6UbO7cQhNehs_GOqIPe9WB2aRtLTzu-XMPzcObjcnqZuIdQUOowup9I1fK4QqcXSAi67tHPtsCVU7AioTa8vsnNuqtemcMqLwIgkBkWZa5My2ytlOWXaP6rBEl_9gXeHdUcYM6lbonqcxOA4IAiZa_ANTud_fxT2uxT_pvhY0iDNA4BokaeTKMV0mbpeICAi5YfKfJoWeO_qW9U__oL_ndlX4gAvd1X7ZaGzTCk7nSTKjhCxcpTU_nWYqKSt-NcNWtYwezBWm81t4hAVTPjYCzZNKxm6ZJrfQOM__5U6K88VjgcATn7dskpkYAkieWQ749PNM7uq5q23cFNOPWRm_gTl0ggycdNjn8-GhN3CMpDZOs4TXtAg6oepKSYN0oP3AoWDg1fmSbD0BaVv_hhUZx80AcAe8kh_EjNQs69vrD6PnhI4aizTgQ3YTUY-WX2nTAU7ORKyGlSO4EDQxO_zLORuJn-_3QKnt26_R50KxFyPg8_211Tb6SzWLmTueH4bQPusIfgDdaMliRj8vbmeKgSGJDUfwmoSwOvkvc8nRbcMY9W8DyW7Xoh3IfYJHYbHLemF7w7KOK7oDtw38bYgKhH4mWKeBSiLvK6WapQt7OpTeTO-WykppTXlQKcBYptyTtxeD9SH4y6QrKTY0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"access_token\":\"lzGYLU236MkdZNXOjToD2BY7hpSC7YKpOyE1O0AolRd2ihSwvY\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/add-customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"add-customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-bank",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiM2I5MWZlMmJjYWRmNGM3Nzc0N2M1ZDA2MzUwODcxODE5YjJiZWM3ZTY5NGVmMTc3MjVhOTJkMjMyMTgxMmU0MWMyOTY2MjBkMTc4Mzc1ODIiLCJpYXQiOjE3MDYxMDA4NTYuMTg0MTM2LCJuYmYiOjE3MDYxMDA4NTYuMTg0MTM4LCJleHAiOjE3Mzc3MjMyNTYuMTc5MDM3LCJzdWIiOiI4MSIsInNjb3BlcyI6W119.kA24idhXTeiFSXWSHqoBrpp6UEUShL8EsWhlYAxRBfoHd44YptGiJ60l5YWh2hC2e7gL-sAPkXUC-lPBXOPLIIPxepJ_EDMfdb60iCWQiFQPIsxUnRoWTFvMevYmaVOaai91odj96VT76-qimEQkDcFHa8KRS79QBdZxj0dyccisMl6fGA-nFZJyqCuAymtM101CL97zVOLLyKZ9QtBExfKlrMsAq4CTuLdwnQzTcbF2Wu7x2i5rQYjsQM4cRNxYG_edG-BhpviLC9r9dD0ROW7u-cB_cQLvR1ibt6l8fj83SkwIC-K4RYFTCgXr8eklSbQQH3e996zNUvkV1Sm1UlhGrPfhBkqJVOiP3mhn6EQtsocxfS-pPvEHlrQ3xoq1fGetehGIUL6Ld6XyzKLZy4dIEXiMrrPTcz6Lh4x4ZAYGt1QcX9JtWKlP87at17yZu0tH-FgW-FUUqmxIbRftAWcdaOG1tfl8jpY-BaH3xrhuKkKhXrsZK95BoiaR0Dri51-6qSshSkidKLG8eFcStw-Bmal6vDVdl21Z7oqivBIbweyGaGg3b0M-8u0MsoDtwMWf4FF-TjQMDPy_oYuIne5anVLxVRDpjIPtw8bkz5qcPoKa8ZU6pZTQ4heb00LPxjXej5CI1FM9ICoRGewhA44T30aNi7eE-CSqp4vOzqE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"access_token\":\"Y0xe6aID1D0eRrnqG8h9wefH7016B5VPwH4GpBWhIlQW72sO4y\",\n    \"_links\": {\n            \"self\": {\n                \"href\": \"https://api-sandbox.dwolla.com/on-demand-authorizations/5179e7d3-b7ba-ee11-ac47-06f818744a9d\",\n                \"type\": \"application/vnd.dwolla.v1.hal+json\",\n                \"resource-type\": \"on-demand-authorization\"\n            }\n        },\n        \"routingNumber\" : \"222222226\",\n        \"accountNumber\" : \"35866619\",\n        \"bankAccountType\" : \"checking\",\n        \"name\" : \"Dev1 Bank1 Checking\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/add-bank",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"add-bank"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "bank-list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMjNlYzdiZmU4N2NlZTdjOWYxYmMzMTJjNmQ1OTMwMzU3OTc2OWFkNGMzYjdkMzgzZjFmNmRkNzllYjljODFmMTFkM2Q5MDU5NzhlYzQyNWYiLCJpYXQiOjE3MTA0MjE0NzAuNzk3Mzk5LCJuYmYiOjE3MTA0MjE0NzAuNzk3NDAzLCJleHAiOjE3NDE5NTc0NzAuNzgyNDY4LCJzdWIiOiIxMjYiLCJzY29wZXMiOltdfQ.RASU26bOIZB2igE1ULudIhWl1KQ6x6DAGcPhxEZIT929LyBcbK6rolIJ8F3eZx0vSx2pswkuzZgVfRO5vvSa_cJDaBKqJxfYW688dIdVKw81ZBLwYr418nYYX2_0cMsm8hhoEa8JST5txSYo4sA1iz9K6yNYE_QZ6qBxGnb4WbbzOKWFCHjQB5tW75GADg_fv0i91wgr8pB2LD6jCa3S0B95zYCOTww0yhGd4g97VrhVpFSuKuxCiVeKOpootF_rjfhKqyR4vzifGxkd5MyfTI6T337cSpPssUG8rm-06e-CCG4ZuibQU0AtiG1ZEr0defhDa6qzkykHH4jg2a7PAEJMIVnlI8OGUDMUuhQ1IGjBGcGReXw0xgjqdRXfSozFUG_bLXOjTSIPFYUJM103RhrDe_wWfMFTo_IYfbVHiXtFXDJgqb9OJ24OAaEw5pzVchkK-c8h6h5o7F-p1gPINrmuBZlI4Z-8ifLvSsSi-SN7XBsgi8jBe8KmTn3SVvb2qPk2iPE6KMyov27r4fR7VlVpJheZwXGvtwqEqwVc9L_9pTBd7kjAMrUuplhQH0cqEImNEZCQX04XnmYrC99D8O7X-OskWe8kmgwMpIroHfgIrlL__oQjIR6wic7YR_VtIbX2aHU_WT8MPh4Hzi18nPrr9KUu6feq5_0pcUBbD7Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"access_token\":\"48LWCUvTsNApQ2ZvuV2sGV6OsnVskkH7ZosSrSH6wKI08vtMvs\" \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/bank-list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"bank-list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user-fund-balance-data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI1IiwianRpIjoiMWU5ZDRjNDE2NDkwNDllMDI2NGM3ZTU2NjYxNjliNjQ3M2UwNDA5MTdlNjE1NzE4YWFhMDhhNzA2MDJhM2Q0YzNiOWYyYmM5MThmMzU0ZTkiLCJpYXQiOjE3MDcyMjMxMDIuMjI3MDkzLCJuYmYiOjE3MDcyMjMxMDIuMjI3MDk1LCJleHAiOjE3Mzg4NDU1MDIuMjIwNDc3LCJzdWIiOiIyMDA3NCIsInNjb3BlcyI6W119.jqv8Siu1KtT9aWeqKWqX5gz9q5lQwGbsiD9Z1sY8mv4G6DNGa_hj4RUx74sz2H3XnMw8V3zhHpecbnWSQvG1i6WGWKx7dKm6564fcuiIZmb2fl9KvaD2RXcN4jdkdzcdV2ZX5PPEPve7wjCeyIfkkMlKiz7IFkWZa_CkBBzAtfT6helq_xUcZ5lr9cUmwTU0F_5t_JuuTpq_42AlknHu0yDB1PLEMmWranKm5EnfMhmuQjNKc0K9u6MCG6erMjI66oXZ5MnbrnNagGBVLiNtR5fxxcBgnvWs9W22CZhRJkoRBxtN1sJBsB9l4KGaAgK6nLhnDZ2wftb4L0LKLRS7OW3KNLCkD-gJf1yUJ3KEH1Q0FPJrgvdXuiwbVwG9UGIIMHtrFps0v02gGBDcYD_iJ0lsZ7gJLd3ZiK49_4yEUYdZX-wfer6-x2j6vKO8qPd-1K2IrtoxdVPU_UZgnibyAGO2hmDMuqI-JZJvuT6WrijZhmRD9vyELJ2sfHandORZo4qQmZycnoKCkn4SsbFA9VIvoKsZI8_KJlnwX_B_Fi_plDIQMzAAAYNASOvkmRCo37zeIvTC2aDfttcrLNvDiZD7MqJmwu8TNgzT1zJPJQfym-lJ1wYl3zThf0_rcvhO6v05wwx2ufm5bfSIzZ-mWJ5YfcJCo2ugYJm7dyN1yCc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\":\"20074\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://devapi.scash.shop/api/v1/auth/user-fund-balance-data",
+							"protocol": "https",
+							"host": [
+								"devapi",
+								"scash",
+								"shop"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"user-fund-balance-data"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "individual-list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOTdiMDY1ZTNhZmM5YmEzMjhlN2I4MTIzMzU1ODRiYzBmYTZkYjk4MTU3MGUwNjdkMWI5ZTJmMjBhNGUzNzYxNTNiMTg5ZTlmYzdmYjhiZWIiLCJpYXQiOjE3MDYxMDUwNDcuOTczMTQxLCJuYmYiOjE3MDYxMDUwNDcuOTczMTQ0LCJleHAiOjE3Mzc3Mjc0NDcuOTY4MTg4LCJzdWIiOiIxMDciLCJzY29wZXMiOltdfQ.AlWGFVB6cl9B0_hmFLdYozyT7uUncMI3hHSy9cTmVaK7Y-3jN_Yu74cAq--2ATN1LQjWr3sg9sjltxzgiujaHcndG1ApWP3RneNYvNCEK6PUt6e-bT6k5j94gHUMq6lxkiz1F6muvG7c1ZZMXZF8K4Po7KKPR8Yy6Yf7vzL5ti2gf2kvJ9JnGUFNYW-XHtMJlnypOOJKy8DJoSrFgr4NycktJXoXgNn_-72YEppvhXWLlr3wW4Ksjb5v9fkrhN4G2Vn11M9FbA-UFOWzmVqC-lbm9UeAFt_I0vb4SW2x3g_m2ctWCKQrXR_FAZ5Ww9-Y_xEXmYhYrPVzsR0Rp4XZEdw3Bm_GOt5lm72ymzGPFb1EnjF5ksLg9ZBYGsXeOqlK1wrf_siY1DLggxMGmV-C_Q4mUuXcU7lvP1jiYiWMrrLDIwHQW4wfzk9nfghNyGdFxWsihT0eZjhdQajA1DT8rIAED4Mb0U1aMLID-HGwP7HwIAoWUt2hC40IvI6ZV8rS6vxQ8fqyx2fn-4kzrtl19GlRHSiHsMYiTgyV3MmkDe411QieIAPXGnYbegw-wTWc373HMSBgkkdMtJ19b9ZvT7bUX5xQGvB_k161x-ge-8XOj1Y-IT0d3Ou486YwqZ_3HaAiv_5j9zLpxe6jxuMbZqBBM-uAOI63NNEjPtYUlDc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\":\"107\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/individual-list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"individual-list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify-micro-deposits",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOTdiMDY1ZTNhZmM5YmEzMjhlN2I4MTIzMzU1ODRiYzBmYTZkYjk4MTU3MGUwNjdkMWI5ZTJmMjBhNGUzNzYxNTNiMTg5ZTlmYzdmYjhiZWIiLCJpYXQiOjE3MDYxMDUwNDcuOTczMTQxLCJuYmYiOjE3MDYxMDUwNDcuOTczMTQ0LCJleHAiOjE3Mzc3Mjc0NDcuOTY4MTg4LCJzdWIiOiIxMDciLCJzY29wZXMiOltdfQ.AlWGFVB6cl9B0_hmFLdYozyT7uUncMI3hHSy9cTmVaK7Y-3jN_Yu74cAq--2ATN1LQjWr3sg9sjltxzgiujaHcndG1ApWP3RneNYvNCEK6PUt6e-bT6k5j94gHUMq6lxkiz1F6muvG7c1ZZMXZF8K4Po7KKPR8Yy6Yf7vzL5ti2gf2kvJ9JnGUFNYW-XHtMJlnypOOJKy8DJoSrFgr4NycktJXoXgNn_-72YEppvhXWLlr3wW4Ksjb5v9fkrhN4G2Vn11M9FbA-UFOWzmVqC-lbm9UeAFt_I0vb4SW2x3g_m2ctWCKQrXR_FAZ5Ww9-Y_xEXmYhYrPVzsR0Rp4XZEdw3Bm_GOt5lm72ymzGPFb1EnjF5ksLg9ZBYGsXeOqlK1wrf_siY1DLggxMGmV-C_Q4mUuXcU7lvP1jiYiWMrrLDIwHQW4wfzk9nfghNyGdFxWsihT0eZjhdQajA1DT8rIAED4Mb0U1aMLID-HGwP7HwIAoWUt2hC40IvI6ZV8rS6vxQ8fqyx2fn-4kzrtl19GlRHSiHsMYiTgyV3MmkDe411QieIAPXGnYbegw-wTWc373HMSBgkkdMtJ19b9ZvT7bUX5xQGvB_k161x-ge-8XOj1Y-IT0d3Ou486YwqZ_3HaAiv_5j9zLpxe6jxuMbZqBBM-uAOI63NNEjPtYUlDc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"access_token\":\"g1aG5caWSYPbaQ1Xrib7DYpz7s6LzTo7p7fjgO6ABOpXGnoBem\",\n    \"funding_source\": \"075bce8f-fde9-4108-be4c-9172efd29e11\",\n    \"amount_data\" : {\n        \"amount1\" : {\n\t\t\t\t\"value\" : \"0.03\",\n\t\t\t\t\"currency\" : \"USD\"\n        },\n        \"amount2\" : {\n            \"value\" : \"0.09\",\n            \"currency\" : \"USD\"\n        }\n    }\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/verify-micro-deposits",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"verify-micro-deposits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fund-transfer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMjQyYjBlMWVmZjdlNzk5M2I2OThjZDg3ZjI0Yzg0ZTVkYWUzYmQ1ZGI0OWY4MDIxYmNkZWUzMzU0YTM0Nzk2Yjg1ZTg3YTcwYzNjYWY0MDMiLCJpYXQiOjE3MTE0NDQ5MDguNjc3MDExLCJuYmYiOjE3MTE0NDQ5MDguNjc3MDEzLCJleHAiOjE3NDI5ODA5MDguNjY3MzAyLCJzdWIiOiIxMjYiLCJzY29wZXMiOltdfQ.XcaKrvBQw5w_1FvnuG0W95Mek0jaGCcyVfBIHDt6h8kFkC7bpLA21VAIMdNcH8V1kaFU_K_YYK2lxiqyQ_932DKNOnpN82ACsMm2OWc63qsokVV45T_uPlgq-_BDav4egr3oQbDWMHZTNO2TFmsUU3XiTPE9DD3JXHgZOR84b-Vlw_xKYc0b-2Q__H0ITTgbU_SgdseSOMmoxBSXoXksGdEj26Oxv1Wqo2T57UmufS_q_LZYD-itUsLuaAzoCix1y9OOtno-zD4k4pvFrgTpmBXEGTdyIx5c4weVnPipOzlpEYnZ7jVOxCcmAlE2-HUoq_5RqdvPsW1NnJEYw5qZAkGuIBJ7QFXtLjiyMsmh8giG9lDmPHT7SBxD8pt8oF7JYJWYLzkYF9zcJMbaQUd4361RQZHgqs9RF7dwvsW-fRVFQZcQgJU7gbfTQ9c45-pbBQt1A3EfERZgBTLrUaDerLo44XNHRvpaNIzDM47_PHQsf1f5v78CU9TVjLQSAAI7SQqU5UjQSQPqmfzLmYAvQR_RbUGLI2BXG1l-EYZe4OhIL0_A7BlTgUEEfe4VKuv9RovkmQj68LOTlT2aOGnRPGFiyoVXu7S3DDy-ej2G2UQhmi8RtiGsMDuqd1qHZFjTTnhu2RQmJCjHcTk2nvI7_DFWCo8F1Qr9_w8W77_Ar2k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"access_token\":\"48LWCUvTsNApQ2ZvuV2sGV6OsnVskkH7ZosSrSH6wKI08vtMvs\",\n    \"destination_id\": \"b1b13b49-f189-45eb-a412-f8a855ccc70b\",\n    \"source_id\": \"82bc18c3-f8c1-4cd8-98cc-3995d96c5fcf\",\n    \"amount\" : 95,\n    \"cashback\" : 5,\n    \"tip\" : 10,\n    \"tax\" : 0,\n    \"to_user_id\":129,\n    \"from_user_id\":126\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/fund-transfer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"fund-transfer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "withdraw-fund-transfer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNDg1OGM1OWQ4MWRlYTBmMzE0ZjVmM2QzMDE3YTg3OGMwODVkOGJjNTRmZTZlMzY1ZDQ3MDYzMGM4OWU3NjQ5MTczODY1YjM5OGQ3OTdjN2UiLCJpYXQiOjE3MDczOTAxOTkuMzA0MzEyLCJuYmYiOjE3MDczOTAxOTkuMzA0MzE1LCJleHAiOjE3MzkwMTI1OTkuMjk4NzcsInN1YiI6IjEyNiIsInNjb3BlcyI6W119.BXK0YzNmXYrSeAP_QDbkwwYHufHk5zBhij0CejL27qz5cpQTeeLMC9Mp3E1QaoNqanMHoH-ydWLo_1GwnPVw_PZBPd-stSSv2WQTJQTVyMtTLxoq1mPK6j08pkZbcoVHM6cpwSunDd4t1XrU9FBOiuiUpp-JLTOkraGHodgSupwKEqndszH53lfYa4Qc3DO_jI_x8bZcs07PWLS27dNuzJnv8RoVAiBdBPwt2OMOeZN5HmPa8GhI4fyvWqgoMOLD5i554ON_7Rdu0XJP7ZAYD1tQ4LUIv1s3fNg9zWdnA9s3Z5ffEdWTZY8ElzERg0Lq_cWSPkDyyAoWceThR-7sSLBLmG8nUaX4rTrY_alVktrjo0WemCkGpmwOAXDIrM0RixN_0mmn5A_BxAuC9T3Fg1WNaQxZ7awLXzowsgmbnmDC8Azux8t4DqVjrd_q_By0_EG5XJmpkAfAfRlAdJnaI8f3erdzhwPpRsd72qTPrTUfbq1il-CW8CNxE46Kxr2xrGgtEJwrt4dmtUncIueSyWlsqRWQ8zFIhRYMk-NAqOhtZeol49eG3oUIiaPcpI-VVDPJ1kqCm5gNKBlZBfU1NbWInkKd311rV8fDDip9irtUZjJk_e4wcOefRq66REvl8ApMk-Ar0BVtzbqCPBdhqyKra97vJW-fPMWk_dSuy40",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"access_token\":\"48LWCUvTsNApQ2ZvuV2sGV6OsnVskkH7ZosSrSH6wKI08vtMvs\",\n    \"destination_id\": \"aa778146-90f3-452a-a665-c89f43203f5b\",\n    \"source_id\": \"a6b5f4d1-ed72-463b-b7b2-277e0e3b3ab8\",\n    \"amount\" : 100\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/withdraw-fund-transfer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"withdraw-fund-transfer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deposit-fund-transfer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNDg1OGM1OWQ4MWRlYTBmMzE0ZjVmM2QzMDE3YTg3OGMwODVkOGJjNTRmZTZlMzY1ZDQ3MDYzMGM4OWU3NjQ5MTczODY1YjM5OGQ3OTdjN2UiLCJpYXQiOjE3MDczOTAxOTkuMzA0MzEyLCJuYmYiOjE3MDczOTAxOTkuMzA0MzE1LCJleHAiOjE3MzkwMTI1OTkuMjk4NzcsInN1YiI6IjEyNiIsInNjb3BlcyI6W119.BXK0YzNmXYrSeAP_QDbkwwYHufHk5zBhij0CejL27qz5cpQTeeLMC9Mp3E1QaoNqanMHoH-ydWLo_1GwnPVw_PZBPd-stSSv2WQTJQTVyMtTLxoq1mPK6j08pkZbcoVHM6cpwSunDd4t1XrU9FBOiuiUpp-JLTOkraGHodgSupwKEqndszH53lfYa4Qc3DO_jI_x8bZcs07PWLS27dNuzJnv8RoVAiBdBPwt2OMOeZN5HmPa8GhI4fyvWqgoMOLD5i554ON_7Rdu0XJP7ZAYD1tQ4LUIv1s3fNg9zWdnA9s3Z5ffEdWTZY8ElzERg0Lq_cWSPkDyyAoWceThR-7sSLBLmG8nUaX4rTrY_alVktrjo0WemCkGpmwOAXDIrM0RixN_0mmn5A_BxAuC9T3Fg1WNaQxZ7awLXzowsgmbnmDC8Azux8t4DqVjrd_q_By0_EG5XJmpkAfAfRlAdJnaI8f3erdzhwPpRsd72qTPrTUfbq1il-CW8CNxE46Kxr2xrGgtEJwrt4dmtUncIueSyWlsqRWQ8zFIhRYMk-NAqOhtZeol49eG3oUIiaPcpI-VVDPJ1kqCm5gNKBlZBfU1NbWInkKd311rV8fDDip9irtUZjJk_e4wcOefRq66REvl8ApMk-Ar0BVtzbqCPBdhqyKra97vJW-fPMWk_dSuy40",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"access_token\":\"48LWCUvTsNApQ2ZvuV2sGV6OsnVskkH7ZosSrSH6wKI08vtMvs\",\n    \"destination_id\": \"39e99075-6dd0-4fa1-a1cf-c1c928a05663\",\n    \"source_id\": \"a6b5f4d1-ed72-463b-b7b2-277e0e3b3ab8\",\n    \"amount\" : 19,\n    \"payment_type\" : \"instant\", //instant or manual\n    \"to_user_id\":126\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/deposit-fund-transfer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"deposit-fund-transfer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cashback-to-wallet",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNDg1OGM1OWQ4MWRlYTBmMzE0ZjVmM2QzMDE3YTg3OGMwODVkOGJjNTRmZTZlMzY1ZDQ3MDYzMGM4OWU3NjQ5MTczODY1YjM5OGQ3OTdjN2UiLCJpYXQiOjE3MDczOTAxOTkuMzA0MzEyLCJuYmYiOjE3MDczOTAxOTkuMzA0MzE1LCJleHAiOjE3MzkwMTI1OTkuMjk4NzcsInN1YiI6IjEyNiIsInNjb3BlcyI6W119.BXK0YzNmXYrSeAP_QDbkwwYHufHk5zBhij0CejL27qz5cpQTeeLMC9Mp3E1QaoNqanMHoH-ydWLo_1GwnPVw_PZBPd-stSSv2WQTJQTVyMtTLxoq1mPK6j08pkZbcoVHM6cpwSunDd4t1XrU9FBOiuiUpp-JLTOkraGHodgSupwKEqndszH53lfYa4Qc3DO_jI_x8bZcs07PWLS27dNuzJnv8RoVAiBdBPwt2OMOeZN5HmPa8GhI4fyvWqgoMOLD5i554ON_7Rdu0XJP7ZAYD1tQ4LUIv1s3fNg9zWdnA9s3Z5ffEdWTZY8ElzERg0Lq_cWSPkDyyAoWceThR-7sSLBLmG8nUaX4rTrY_alVktrjo0WemCkGpmwOAXDIrM0RixN_0mmn5A_BxAuC9T3Fg1WNaQxZ7awLXzowsgmbnmDC8Azux8t4DqVjrd_q_By0_EG5XJmpkAfAfRlAdJnaI8f3erdzhwPpRsd72qTPrTUfbq1il-CW8CNxE46Kxr2xrGgtEJwrt4dmtUncIueSyWlsqRWQ8zFIhRYMk-NAqOhtZeol49eG3oUIiaPcpI-VVDPJ1kqCm5gNKBlZBfU1NbWInkKd311rV8fDDip9irtUZjJk_e4wcOefRq66REvl8ApMk-Ar0BVtzbqCPBdhqyKra97vJW-fPMWk_dSuy40",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"amount\" : 10\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/cashback-to-wallet",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"cashback-to-wallet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "webhooks",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNDg1OGM1OWQ4MWRlYTBmMzE0ZjVmM2QzMDE3YTg3OGMwODVkOGJjNTRmZTZlMzY1ZDQ3MDYzMGM4OWU3NjQ5MTczODY1YjM5OGQ3OTdjN2UiLCJpYXQiOjE3MDczOTAxOTkuMzA0MzEyLCJuYmYiOjE3MDczOTAxOTkuMzA0MzE1LCJleHAiOjE3MzkwMTI1OTkuMjk4NzcsInN1YiI6IjEyNiIsInNjb3BlcyI6W119.BXK0YzNmXYrSeAP_QDbkwwYHufHk5zBhij0CejL27qz5cpQTeeLMC9Mp3E1QaoNqanMHoH-ydWLo_1GwnPVw_PZBPd-stSSv2WQTJQTVyMtTLxoq1mPK6j08pkZbcoVHM6cpwSunDd4t1XrU9FBOiuiUpp-JLTOkraGHodgSupwKEqndszH53lfYa4Qc3DO_jI_x8bZcs07PWLS27dNuzJnv8RoVAiBdBPwt2OMOeZN5HmPa8GhI4fyvWqgoMOLD5i554ON_7Rdu0XJP7ZAYD1tQ4LUIv1s3fNg9zWdnA9s3Z5ffEdWTZY8ElzERg0Lq_cWSPkDyyAoWceThR-7sSLBLmG8nUaX4rTrY_alVktrjo0WemCkGpmwOAXDIrM0RixN_0mmn5A_BxAuC9T3Fg1WNaQxZ7awLXzowsgmbnmDC8Azux8t4DqVjrd_q_By0_EG5XJmpkAfAfRlAdJnaI8f3erdzhwPpRsd72qTPrTUfbq1il-CW8CNxE46Kxr2xrGgtEJwrt4dmtUncIueSyWlsqRWQ8zFIhRYMk-NAqOhtZeol49eG3oUIiaPcpI-VVDPJ1kqCm5gNKBlZBfU1NbWInkKd311rV8fDDip9irtUZjJk_e4wcOefRq66REvl8ApMk-Ar0BVtzbqCPBdhqyKra97vJW-fPMWk_dSuy40",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"38a1d6f5-e8eb-4678-823e-0d1eb8f9c9ce\",\n    \"topic\": \"customer_bank_transfer_completed\",\n    \"_links\": {\n        \"self\": {\n            \"href\": \"https://api-sandbox.dwolla.com/events/38a1d6f5-e8eb-4678-823e-0d1eb8f9c9ce\"\n        },\n        \"account\": {\n            \"href\": \"https://api-sandbox.dwolla.com/accounts/4275e5d9-6956-49cc-9b86-fafe3407ec2d\"\n        },\n        \"customer\": {\n            \"href\": \"https://api-sandbox.dwolla.com/customers/4c9cf58e-6d31-4338-8b03-5efa90e5810e\"\n        },\n        \"resource\": {\n            \"href\": \"https://api-sandbox.dwolla.com/transfers/bb243b88-cbd0-ee11-ac47-06f818744a9d\"\n        }\n    },\n    \"created\": \"2024-02-21T15:12:56.775Z\",\n    \"timestamp\": \"2024-02-21T15:12:56.775Z\",\n    \"resourceId\": \"bb243b88-cbd0-ee11-ac47-06f818744a9d\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/webhooks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"webhooks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "transfer-list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMjNlYzdiZmU4N2NlZTdjOWYxYmMzMTJjNmQ1OTMwMzU3OTc2OWFkNGMzYjdkMzgzZjFmNmRkNzllYjljODFmMTFkM2Q5MDU5NzhlYzQyNWYiLCJpYXQiOjE3MTA0MjE0NzAuNzk3Mzk5LCJuYmYiOjE3MTA0MjE0NzAuNzk3NDAzLCJleHAiOjE3NDE5NTc0NzAuNzgyNDY4LCJzdWIiOiIxMjYiLCJzY29wZXMiOltdfQ.RASU26bOIZB2igE1ULudIhWl1KQ6x6DAGcPhxEZIT929LyBcbK6rolIJ8F3eZx0vSx2pswkuzZgVfRO5vvSa_cJDaBKqJxfYW688dIdVKw81ZBLwYr418nYYX2_0cMsm8hhoEa8JST5txSYo4sA1iz9K6yNYE_QZ6qBxGnb4WbbzOKWFCHjQB5tW75GADg_fv0i91wgr8pB2LD6jCa3S0B95zYCOTww0yhGd4g97VrhVpFSuKuxCiVeKOpootF_rjfhKqyR4vzifGxkd5MyfTI6T337cSpPssUG8rm-06e-CCG4ZuibQU0AtiG1ZEr0defhDa6qzkykHH4jg2a7PAEJMIVnlI8OGUDMUuhQ1IGjBGcGReXw0xgjqdRXfSozFUG_bLXOjTSIPFYUJM103RhrDe_wWfMFTo_IYfbVHiXtFXDJgqb9OJ24OAaEw5pzVchkK-c8h6h5o7F-p1gPINrmuBZlI4Z-8ifLvSsSi-SN7XBsgi8jBe8KmTn3SVvb2qPk2iPE6KMyov27r4fR7VlVpJheZwXGvtwqEqwVc9L_9pTBd7kjAMrUuplhQH0cqEImNEZCQX04XnmYrC99D8O7X-OskWe8kmgwMpIroHfgIrlL__oQjIR6wic7YR_VtIbX2aHU_WT8MPh4Hzi18nPrr9KUu6feq5_0pcUBbD7Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"access_token\":\"YFaSDfnuZbosZD5I2uePOeRp6yFrzKeA8PKV0mkl0Tcsz69d17\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.101.221:8003/api/v1/auth/transfer-list?page=1",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"101",
+								"221"
+							],
+							"port": "8003",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"transfer-list"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all-transactions",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNDk3YTY3ZjNmMWE0NTUxOTFjNTY1YzI1YzYxMjAxYTk2NDE4NzZjZmU3ZmQ5YWY1MTY4ODdlNjhmYjA3OTRmYmUxMTg3MzY1NzZjNDg4MGUiLCJpYXQiOjE3MTA0OTM2MTAuMzg4MTE2LCJuYmYiOjE3MTA0OTM2MTAuMzg4MTE5LCJleHAiOjE3NDIwMjk2MTAuMzcyMzY1LCJzdWIiOiIxMjYiLCJzY29wZXMiOltdfQ.Ciqt9D4jaf92lUCHwDOXzNgCfpvmOOe9dNRCZmQiQ1hEurzrM29Ot1F0nSnz1gCjbBgZJxgWal5AP9SGdRIg6VqaoDsieeRBddQMoxHyGb3LcyMZgpkr1tDL_u6oguGNBfuJTkRTMSu3my8CnJdstdFzLHrkGN2Me0XCHSHWzZvPNGeR7q72N3NASVpHdJRqmwWJphP9FgkYCZ5y6HDu_0zB8kyisxrf6COuK26PXQhx8FTl37IasrgJOfg14PXWjrM4ElkJEYrhT-_9d1__x3pyEIJv5IQB3Vy3pgn6sBwtB0IPmNSKVb56X2bIoegkCDNrut4YPJz9mepU4sWBaRvqBL_coLLNXux70Og2CayqUuK0gDsvO0M4-yiH6Jqr5gLw7ocDyiaoBfjzpS-iyYr1h6m7I8VUYQ97Czznz439xFfGbz6bfr4RE30PR3hq3ZOwzZ3-EBsjxJc9giZ9GZzJGU9qyM0OB-qYSSy7otiisCa27jiwC7ewOOOvcCqV2G1jYNKMDVu87PtHtJbIIhY58YU5Gvm6UEaxIx4TO4zHu3rePZuSYwT7Wc_z2pR9GSslhDPghgZjYcnoqW6YbukSonBjD1ZhFpaFRIaMo3f4iX-HXrLoIKTaHXZ5_j4qgHUNvAuIsJzxbC-aL0DDV3O8SmE-GXAK5i-4UVBFEn8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"access_token\":\"YFaSDfnuZbosZD5I2uePOeRp6yFrzKeA8PKV0mkl0Tcsz69d17\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/all-transactions?page=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"all-transactions"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "notification-list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMWU5OGY4MTlmOTI0ZWY1ODEyNTk0Y2NiYzJjNGQyZWZhMzMxODQ3ZjEwN2Y0Y2Q2YzI1YjQ1ZWNkNGM4MTkyNzhlYzAxY2YzMjE3NTRiYTIiLCJpYXQiOjE3MDc0OTAwOTkuODAxNDYzLCJuYmYiOjE3MDc0OTAwOTkuODAxNDY3LCJleHAiOjE3MzkxMTI0OTkuNzg5MjM1LCJzdWIiOiIxMjYiLCJzY29wZXMiOltdfQ.Q7GA3eRa4Kew04rHOfqFpzrlvoBlTZObn5F7iOayw44NSG3W5aFzfdUvomRGVlz-dnWSObBgZO1QwhHbdF10Y6o_X0iKhTQylLCYVigs_4I8V745O4JVK0SpT0_e-fjQLmmWbsYAl8GStpv9shRE5uQIxgFff2LCSwTGJ9kTstbYkSqyrc1aa4eBZpXROSiUtyDnNAI2Dw1awRhWEkS1zXIhl3wiJ7PxOJbFOJBEwNw5k15XoCH8KOwCx4BFs9258FY45esX9k-ohiAW4jj3wqz0MqcUwAHwCvdzqAOvaeNz7JzSUOIm7NdkCHBHoaIEu9LQGFQdzxedSwKAyvJwisfttrCW6wp-mmtpUbhByMCY9ax0pmykugcOhQtVPudBhQpGTqzQ2Q0-xGmKKdrOXl4y05caTzwHdQ8FOP4L_3Pc5svdqcGutJWq6YsTPwaxkZPE7QBqXTigDpdTgkHNw3WCqdYzFwD23MzTpSZg-OkxLDX6gdjHVw-DC5m_tkwxwRD_LK0pgle-1VkWLhM9cu1InHMNIDV6NCtnU2w8HN0rlSyDySycesb-GvkMLwHO6IzuQ7BuFQCVWhQlMxSS2HtlaUC4h0X3sawE4xE-Gg4WeooL34fsKZi2fdlYzxd_5tSnLxptMcpC21lScKxetS77X7iqv2EIbBRDAjpRaso",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"access_token\":\"YFaSDfnuZbosZD5I2uePOeRp6yFrzKeA8PKV0mkl0Tcsz69d17\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/notification-list?page=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"notification-list"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "wallet-transfer-list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOTM1MDJmNDk3OTBjMDJlODg1ZDEwNWVkMjA5OWI1MTA0MDJhYjY2NDQ5YzdiZjBkNmY4YTk2NDZiYWM1Yzk1YjY1MGU4MjU3MjlkYjA4YWQiLCJpYXQiOjE3MDY3MDAzMzYuNzAxMDIsIm5iZiI6MTcwNjcwMDMzNi43MDEwMjIsImV4cCI6MTczODMyMjczNi42OTU5MDIsInN1YiI6IjEwNyIsInNjb3BlcyI6W119.qzfXtpBAwa7QgTI8PmSnw8008wYhhghsh1CfyG5sCbYbwaBEjXi6PmBNpgjaRRv4NriQF6WtCGaGZV2hYS52aH1DIDXAKJONVONspSV9yMPim6dGFUqbSYd23C7Zr2rUUgVPtBe0zvroE6rUDC5M-lVHF3L-_qmvSCbb10xUoEurqtea4JmtUm7Y3RP8U-0ahO6pqt8s1gh-EZnZQnHodCwVi0hZnXng5zxH_1ymoNqACfWCJNfZtgvUF0NmkOLJJIN9NmDzeRpXQq90X3_cezLOaT3w_J6iXtB0_saG99O24aHP_T8w6lz8C-HDDz59PhTlg0c-LKaYbLhFQsxu8PpP_vH0VjHpIb0DOQfhYe6AzR0gvepFx2pIioIfAlZuDjxsgzlqgnm6ZeBdzETQDJzsrZwHgOBgJW3kJrJn3mNYfQyPkjM1-WmvGpPkIftBhs-eXnpAf51GX_GDBUtEwHzXpvpNF2JX5zoW-VpiMHHZv_u8WotA_ZkzC1qgGYQv9jzNe9OQYPqRPlyxg9YtEOOMr4-IUMn0E7HyJZJOKpUfgUZhnqyYWA0IE3liR3-FwSo6Cz0P_SGOQQGp8uzhxlkvtLLKZela8OIMMAXDajlrt46hPljr4bPV4G_PJeM4MDvQyTkzkJEObgFvHXS_9GHLO_a67AIxR_O-IMfhiME",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"access_token\":\"YFaSDfnuZbosZD5I2uePOeRp6yFrzKeA8PKV0mkl0Tcsz69d17\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/wallet-transfer-list?page=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"wallet-transfer-list"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-latest-transaction",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMjNlYzdiZmU4N2NlZTdjOWYxYmMzMTJjNmQ1OTMwMzU3OTc2OWFkNGMzYjdkMzgzZjFmNmRkNzllYjljODFmMTFkM2Q5MDU5NzhlYzQyNWYiLCJpYXQiOjE3MTA0MjE0NzAuNzk3Mzk5LCJuYmYiOjE3MTA0MjE0NzAuNzk3NDAzLCJleHAiOjE3NDE5NTc0NzAuNzgyNDY4LCJzdWIiOiIxMjYiLCJzY29wZXMiOltdfQ.RASU26bOIZB2igE1ULudIhWl1KQ6x6DAGcPhxEZIT929LyBcbK6rolIJ8F3eZx0vSx2pswkuzZgVfRO5vvSa_cJDaBKqJxfYW688dIdVKw81ZBLwYr418nYYX2_0cMsm8hhoEa8JST5txSYo4sA1iz9K6yNYE_QZ6qBxGnb4WbbzOKWFCHjQB5tW75GADg_fv0i91wgr8pB2LD6jCa3S0B95zYCOTww0yhGd4g97VrhVpFSuKuxCiVeKOpootF_rjfhKqyR4vzifGxkd5MyfTI6T337cSpPssUG8rm-06e-CCG4ZuibQU0AtiG1ZEr0defhDa6qzkykHH4jg2a7PAEJMIVnlI8OGUDMUuhQ1IGjBGcGReXw0xgjqdRXfSozFUG_bLXOjTSIPFYUJM103RhrDe_wWfMFTo_IYfbVHiXtFXDJgqb9OJ24OAaEw5pzVchkK-c8h6h5o7F-p1gPINrmuBZlI4Z-8ifLvSsSi-SN7XBsgi8jBe8KmTn3SVvb2qPk2iPE6KMyov27r4fR7VlVpJheZwXGvtwqEqwVc9L_9pTBd7kjAMrUuplhQH0cqEImNEZCQX04XnmYrC99D8O7X-OskWe8kmgwMpIroHfgIrlL__oQjIR6wic7YR_VtIbX2aHU_WT8MPh4Hzi18nPrr9KUu6feq5_0pcUBbD7Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"access_token\":\"TkmUmBxWCQ4R52iAdddy722CuWzjfmzo5K3RteTZrwa0Uz31qb\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/get-latest-transaction",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"get-latest-transaction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "bank-balance",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOTdiMDY1ZTNhZmM5YmEzMjhlN2I4MTIzMzU1ODRiYzBmYTZkYjk4MTU3MGUwNjdkMWI5ZTJmMjBhNGUzNzYxNTNiMTg5ZTlmYzdmYjhiZWIiLCJpYXQiOjE3MDYxMDUwNDcuOTczMTQxLCJuYmYiOjE3MDYxMDUwNDcuOTczMTQ0LCJleHAiOjE3Mzc3Mjc0NDcuOTY4MTg4LCJzdWIiOiIxMDciLCJzY29wZXMiOltdfQ.AlWGFVB6cl9B0_hmFLdYozyT7uUncMI3hHSy9cTmVaK7Y-3jN_Yu74cAq--2ATN1LQjWr3sg9sjltxzgiujaHcndG1ApWP3RneNYvNCEK6PUt6e-bT6k5j94gHUMq6lxkiz1F6muvG7c1ZZMXZF8K4Po7KKPR8Yy6Yf7vzL5ti2gf2kvJ9JnGUFNYW-XHtMJlnypOOJKy8DJoSrFgr4NycktJXoXgNn_-72YEppvhXWLlr3wW4Ksjb5v9fkrhN4G2Vn11M9FbA-UFOWzmVqC-lbm9UeAFt_I0vb4SW2x3g_m2ctWCKQrXR_FAZ5Ww9-Y_xEXmYhYrPVzsR0Rp4XZEdw3Bm_GOt5lm72ymzGPFb1EnjF5ksLg9ZBYGsXeOqlK1wrf_siY1DLggxMGmV-C_Q4mUuXcU7lvP1jiYiWMrrLDIwHQW4wfzk9nfghNyGdFxWsihT0eZjhdQajA1DT8rIAED4Mb0U1aMLID-HGwP7HwIAoWUt2hC40IvI6ZV8rS6vxQ8fqyx2fn-4kzrtl19GlRHSiHsMYiTgyV3MmkDe411QieIAPXGnYbegw-wTWc373HMSBgkkdMtJ19b9ZvT7bUX5xQGvB_k161x-ge-8XOj1Y-IT0d3Ou486YwqZ_3HaAiv_5j9zLpxe6jxuMbZqBBM-uAOI63NNEjPtYUlDc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"access_token\":\"TkmUmBxWCQ4R52iAdddy722CuWzjfmzo5K3RteTZrwa0Uz31qb\",\n    \"funding_source\":\"aa778146-90f3-452a-a665-c89f43203f5b\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/wallet-balance",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"wallet-balance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "my-wallet-data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOTdiMDY1ZTNhZmM5YmEzMjhlN2I4MTIzMzU1ODRiYzBmYTZkYjk4MTU3MGUwNjdkMWI5ZTJmMjBhNGUzNzYxNTNiMTg5ZTlmYzdmYjhiZWIiLCJpYXQiOjE3MDYxMDUwNDcuOTczMTQxLCJuYmYiOjE3MDYxMDUwNDcuOTczMTQ0LCJleHAiOjE3Mzc3Mjc0NDcuOTY4MTg4LCJzdWIiOiIxMDciLCJzY29wZXMiOltdfQ.AlWGFVB6cl9B0_hmFLdYozyT7uUncMI3hHSy9cTmVaK7Y-3jN_Yu74cAq--2ATN1LQjWr3sg9sjltxzgiujaHcndG1ApWP3RneNYvNCEK6PUt6e-bT6k5j94gHUMq6lxkiz1F6muvG7c1ZZMXZF8K4Po7KKPR8Yy6Yf7vzL5ti2gf2kvJ9JnGUFNYW-XHtMJlnypOOJKy8DJoSrFgr4NycktJXoXgNn_-72YEppvhXWLlr3wW4Ksjb5v9fkrhN4G2Vn11M9FbA-UFOWzmVqC-lbm9UeAFt_I0vb4SW2x3g_m2ctWCKQrXR_FAZ5Ww9-Y_xEXmYhYrPVzsR0Rp4XZEdw3Bm_GOt5lm72ymzGPFb1EnjF5ksLg9ZBYGsXeOqlK1wrf_siY1DLggxMGmV-C_Q4mUuXcU7lvP1jiYiWMrrLDIwHQW4wfzk9nfghNyGdFxWsihT0eZjhdQajA1DT8rIAED4Mb0U1aMLID-HGwP7HwIAoWUt2hC40IvI6ZV8rS6vxQ8fqyx2fn-4kzrtl19GlRHSiHsMYiTgyV3MmkDe411QieIAPXGnYbegw-wTWc373HMSBgkkdMtJ19b9ZvT7bUX5xQGvB_k161x-ge-8XOj1Y-IT0d3Ou486YwqZ_3HaAiv_5j9zLpxe6jxuMbZqBBM-uAOI63NNEjPtYUlDc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"access_token\":\"TkmUmBxWCQ4R52iAdddy722CuWzjfmzo5K3RteTZrwa0Uz31qb\",\n    \"funding_source\":\"aa778146-90f3-452a-a665-c89f43203f5b\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/my-wallet-data",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"my-wallet-data"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify Otp",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const jsonData =pm.response.json();",
+									"//console.log(jsonData);",
+									"const token = jsonData.data?.token;",
+									"if(token){",
+									"    pm.collectionVariables.set(\"token\",'Bearer '+token);",
+									"    console.log(token);",
+									"}",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    // \"email_phone_number\":\"testuser@gmail.com\",\n    \"email_phone_number\":\"shivangcodebrew@gmail.com\",\n    \"country_code\": 91,\n    \"otp\":4920,\n    \"device_token\":\"123456\",\n    \"device_type\":\"IOS\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/verify-otp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"verify-otp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign Up",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const jsonData =pm.response.json();",
+									"//console.log(jsonData);",
+									"const token = jsonData.data?.token;",
+									"if(token){",
+									"    pm.collectionVariables.set(\"token\",'Bearer '+token);",
+									"     console.log(token);",
+									"}",
+									"",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "Menakshi",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "sharma",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "menakshi@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "70278765512",
+									"type": "text"
+								},
+								{
+									"key": "country_code",
+									"value": "91",
+									"type": "text"
+								},
+								{
+									"key": "date_of_birth",
+									"value": "1995-03-21",
+									"type": "text"
+								},
+								{
+									"key": "zipcode",
+									"value": "201301",
+									"type": "text"
+								},
+								{
+									"key": "is_agree",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Admin@123",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "ssn",
+									"value": "365696523",
+									"type": "text"
+								},
+								{
+									"key": "referal_code",
+									"value": "SCASH3126",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/ubuntu/Downloads/Images/19.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/sign-up",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"sign-up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Image Upload",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const jsonData =pm.response.json();",
+									"//console.log(jsonData);",
+									"const image = jsonData.data.file;",
+									"pm.collectionVariables.set(\"image\",image);",
+									"console.log(image);",
+									"",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/vivek/Downloads/download.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{API_URL}}/file/image/upload",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"file",
+								"image",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Walkthrough Video",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/configuration/walkthrough-video",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"configuration",
+								"walkthrough-video"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Walkthrough Screen",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/configuration/walkthrough-screen",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"configuration",
+								"walkthrough-screen"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMWRmYzlmY2Y2YjBhNGNhNTg5YzgzZmM4MWNmYzNiY2U0NTRmMGVhZmNmNWUzZjRlODM4MDcwZTU0NTdiNWJlZTQzYTEzYzYzNzM2MmQ0ZjMiLCJpYXQiOjE3MDkyOTgxMjAuMzA1MTczLCJuYmYiOjE3MDkyOTgxMjAuMzA1MTc2LCJleHAiOjE3NDA4MzQxMjAuMjk5NjM1LCJzdWIiOiIxMjYiLCJzY29wZXMiOltdfQ.B9aXzKyBHDtm0I-wjXq7-GJxBVvBNpgC1ODETPYwc9VgSEfcjWeDpajS4LmNMqlGxKE7yCs7AQt38G4sb6DAkI-qdB-uxFx0ooaQ57D5mXkJhPnPEwAfENfHVPJMPsSgOi5F_7O7VGUKHvY3raZHvgWYPif3G-Y1RqUYEcx-EXO-S59VYq3JNvJBNQTd50Hak5qXt3rku1n_4bmwT-l7DMQy0Qg8mat5k9YkJgANnQ_RQRHLN3VzgF9XaiGTc5cGIfAfd6Oo7c336ZlGchbWU2K-dmi1-vZxxDPBBPsdpjzk6QcIvc_RiSmq75ChSN_eMxiBa-HGwbs8AwdM20d_6-asxLFF1gb6Tu5i6lQvIXAyVrQEKwAOYqRNdgDPpCjs1-vqbgSM3g7UDzqQbLVZYvWJPmPVI6Q6VlGm_KyugXx8ZkC-FPdxjESrTASXcvjaSNpwQrFbz5_0MmMSqpCRvQyRlGcc5yRs2WPe9Ss5Snbux-rEt_rDaENfrjPZGWcKzdBmZWuYRmUFPRm0A8wtjowHNKKIjoTYsYEiYKdOs3x-NEddBAkIJgjs0KiH-PdOUQNtijo9nS6XuIITtvvcFV5Wri7oE_GZY2Dn_wUx4Ej06fe1ic7fIY4piUuOmhIhiQ0guxsUWDksnLsqiBfnsdXxveva9DAgOgBPboC5DjM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/user/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Profile Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYzIyOTVlNDY4YjJiYjUyZjJmZmM4NWZlYjVjZTgwNGQzYjU0NGM1MWM5NDg3NjA0MGNmMTBhZmFkYzk0ZmI0NjgyY2Y3YmExOTUyYzI0NDEiLCJpYXQiOjE3MDk2MjM1MjcuMjYzMjAzLCJuYmYiOjE3MDk2MjM1MjcuMjYzMjA2LCJleHAiOjE3NDExNTk1MjcuMjU2NjIyLCJzdWIiOiIxMjYiLCJzY29wZXMiOltdfQ.r_tey2cEaxq7DNg2GZrLbVS3QcXL9yHM-73UtmSNOU0-Z91SpDtU1Lj5mTSSaahZrbQcVnBeyedTm6csBhmyrKWqI9x5VR01VLI-h4GU1vk3z-bnSGuw5bddveRC68nLYaaItIbBXfHRrI_gVzFzmthuBSKiWcybt0Oj5DZhAdtyd3MbcAATEeXYz2ORA5dPloMWNx7rkjtr66wXWg-8dLSHSM_NpsNlcLlYgMuldFQPsn-DQ0eW3l9NrNpbCv_Kf6KoaljQFW1eTIjiCANYaxf1OwdqAOVFYGquFTMq0tkckSAgkkFqQ1Rh3I-OYVJ1Qz3-Tmc3nLtkBhlj5p7Bt41_9-2dOhOFWj6_WF-2ukx_C0RcuIbFy32N-cv0R784jy5krvRTmBqZ7udnAf6nsK6lf8CADaf7lGO8EAK0uH8_8mWhKQhyqhRHAnTxpXy-uVTaFDtkzsrBF6yYqw1JFtw01F_NPxp2pLcMK0obBhlUuqlckg9Sd7i8GRzFp511bNl-CVig_hkBq_s2wQaF0jE7TA_4eAwMyTVklXfmgdBw3I5byzFEiTr5sTaVlHB3JXl0UVu3v59PEjz-FcRVh24WwGXrTspw2mbq31O7hL2zO2gKoEzrxS5AmrikuCoEoon01Q9zQSK1NQl_KmT_beLg_A_20-vJFfvqsZDUvpQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "tony1",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "stark1",
+									"type": "text"
+								},
+								{
+									"key": "date_of_birth",
+									"value": "1995-03-21",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"value": "https://scash-assests.s3.us-west-2.amazonaws.com/image/w1Aaixx5qxKZQCNJldNks26j2g8G4mb8wX1dCvmX.jpg",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/user/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"user",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URL}}/auth/user/detail:",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"auth",
+								"user",
+								"detail:"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI1IiwianRpIjoiOTNhYzYyNTNiNjRhOGU1NjQwMDNlZGM4N2E3MDVhYmRiZjViNzNmZGEzNDZkNjg4MTBmZGIyYWYyOTY4ODRhNTE0NjhjYTE5NDRjYTVjODQiLCJpYXQiOjE3MDUzMTU2MDIuNjAzOTA0LCJuYmYiOjE3MDUzMTU2MDIuNjAzOTA2LCJleHAiOjE3MzY5MzgwMDIuNTk3NTAyLCJzdWIiOiIyMDA3MCIsInNjb3BlcyI6W119.KfF49hEfOYcghY1m_lux-nUEB5KxgBnb9-nPpwk_fFEv-Zn88GDoj8eZ0y-lv0vfdW0VDt413nyJIKbwGgwCCXXnnDb9Z1y2fLbmcbkgzGV6O6sxxqGpI5UJ-jsCSCAcGA_u8Sb63F04_CMuhbbbbrt8QXOWk5itzgpxDNGn407T7iEColNqqp6j4je_6aHJJGYeN53UkPaBD9IFSE-LSz--T67X9lENItTQqWtUfnZG9fJGPzKS1dl7nt4jIxLQw2RZ_tJOuYamAgOjbmwFFYO5NTRDSaRY-N78kIP3WaxeU199aVSUYxr-BKKKokvUkWF9s1cxZXfPKXQ0-BMm9DAPLFcZ81U1h_8wreH-N8fSGM2dc_S1jTnDDB6_nDisH6-_F_X8IGvUK1p1gvSg0bUHPEzhgAgC5naFgaPTrTz4BfDuJU5cs0Oan-Dy5b6amXg5JH0eM5yMi1yrdV_37LuKdeGTu5hSZXhWTd2iMo7nJ5NaeFTsnAzhUXwaAMTd6HINcYL5zxKrB2XukkEngpPeqMa7tT6Kp_c4-Sdb_BCodwvwOfldZeJbedTHKxMWz85pfVcozCeAW1yd8WWw51nSjDeH7skfzDbw3WKIy2UFDTPolApbicXbvuqtn_g9WxrLc53JrfpmznQfaHiCmTH5HsLR4Ez9FbBmpcVcvHc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"search\":\"ram\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://devapi.scash.shop/api/v1/auth/user",
+							"protocol": "https",
+							"host": [
+								"devapi",
+								"scash",
+								"shop"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNDIxOTJhMWRiMDI4ODAzNDdiZjczYjRhODM2YTE1NTEzOGQyMzcyODMyNjcyNjM1MDdmODFhZWMwZDU2NzExZGNmNjIwZDAyZWUzNWE5YjgiLCJpYXQiOjE3MDg2OTEyODUuOTM5MDQsIm5iZiI6MTcwODY5MTI4NS45MzkwNDQsImV4cCI6MTc0MDMxMzY4NS45MzIzMSwic3ViIjoiMTM4Iiwic2NvcGVzIjpbXX0.Q_JzLY-qU1pEd_tNiiUlDyaBAzKukkTEtWQ8gHCNoASESsDchFJf1rbMoYVVFuEtrQA410-dnb1eXpoSv0ppJY-8pRc21wPdAbym_qGSDTdeH0isv8tdgmr6yGfT-PSR5kzKmvkh-PDr9MVmI0w2i-TSZfjUXCUvPATHBjrWOJaKm2bvW3Rjpuo7W2R5tVw0OqVw94rlhwfdeZeN9R26fuP8QyuI3E8wJRx0_HlLgGB7mpZtldgvXSgvhVz86uAoxY9-5IPMl-08wedOZ_vSv6rt88emZsuOETa7KJWUPbqLjLX9JejaPnASssTUDstEw8LLb0J-EpzLcsZU-ro613XcA0s9lxGasah60endyvK2FVhW_SrLfsBfqnLy9cDm4DrRNx480g2n9j5BNYySG5SvipXikHDsXuByUHzI_zFtML192ePFIwxNLVQAi7rsMTVjqPcrXgci_3_U4F2Q-N6JN9P2RS38qlw9FwNR_EWWUEl26JvvFuLvS1PfYjQ0WlAYpAqqdWO_G55qlahfkNuFauY7MXMUG8rS9Or9fK4C_RvG0JFKtY3uBbILW66QQaicOTre_VHo-SJARmd2Et8XdJ9PDT5VsB16sCCIAFSGWlls-CbBEuHk6OdwH8szx9sewogLL8MpCP9YlxDeKbbFpGIiBL8B-pi3Ln5FMiQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "image",
+									"value": "{{image}}",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "testuser@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "8219653016",
+									"type": "text"
+								},
+								{
+									"key": "country_code",
+									"value": "91",
+									"type": "text"
+								},
+								{
+									"key": "date_of_birth",
+									"value": "1995-03-21",
+									"type": "text"
+								},
+								{
+									"key": "zipcode",
+									"value": "10011",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "47 W 13th St, New York, NY 10011, USA",
+									"type": "text"
+								},
+								{
+									"key": "address_2",
+									"value": "Chandigarh",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "NY",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "New York",
+									"type": "text"
+								},
+								{
+									"key": "latitude",
+									"value": "40.73644940000001",
+									"type": "text"
+								},
+								{
+									"key": "longitude",
+									"value": "-73.9962784",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/user/update/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"user",
+								"update",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Address",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"postal_code\":160028,\n    \"address\":\"Chandigarh\",\n    \"address_2\":\"Chandigarh\",\n    \"state\":\"Chandigarh\",\n    \"city\":\"Chandigarh\",\n    \"latitude\": \"30.7181\",\n    \"longitude\": \"76.8043\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/auth/address/create",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"auth",
+								"address",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Privacy Policy",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://devapi.scash.shop/api/v1/privacy-policy",
+							"protocol": "https",
+							"host": [
+								"devapi",
+								"scash",
+								"shop"
+							],
+							"path": [
+								"api",
+								"v1",
+								"privacy-policy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Term Condition",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://devapi.scash.shop/api/v1/term-condition",
+							"protocol": "https",
+							"host": [
+								"devapi",
+								"scash",
+								"shop"
+							],
+							"path": [
+								"api",
+								"v1",
+								"term-condition"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Faq",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/faq",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"faq"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "banner",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/banner",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"banner"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "my-offer",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZTg2NTQzOWRlZDZhOGZjZDZlYTNjNTcwYjlmOTNkZDVmZGQyYzQ3ZTJlZGFlMGZlNTAxZjQ0YmJiNjdjN2U2OWU5MWIzYmFhNzU0YzlhMTQiLCJpYXQiOjE3MTAzNDM1MzcuNzI3MTkyLCJuYmYiOjE3MTAzNDM1MzcuNzI3MTk1LCJleHAiOjE3NDE4Nzk1MzcuNzIxNjk4LCJzdWIiOiIxMjkiLCJzY29wZXMiOltdfQ.aUOBTPCktBx7ZRbg2VZsnwtfXK_uhz-ZHrrZb--CPLiLNF8jpo8HDW_EgarnoAWeNT3IixUx3vSlksCzUhE-bF9ch1lUw2P_LaSAys-jM0I-R01B-XvHk_8c9GtKq-WJ6OqMLk62VIDlfPRGu5Ruem3HpdvyVW6JiNc8KbfQh24LBq1xwF7P_aEveWi9x4SMa5C8jxriVfW_Y2UaiwWH3rGp9hW8O8UWjyxN9PNWDU5c66fmTmr2nPzU7pTR2zA___8DPvfgDoZ38P6ZxlV0NLrpqk218d3j98llFjafsXfm5QkoR_6lufzPH7wglTCC5BrsLY53cNfwxqkAeGUiay3oVgM3mdbbHgi9axwEXWTOkw6htVzVJa5_sce0vg6ggK9TcNLERbcoXm3x5vEwOy7oXYb8WILw9JhopnzWhEvuaTCDroZdP42C2E6hNfuTPhpqcX_65dmHQkeRd04KY5_bjEHx1yKLxD0NgCmH7s_EHEOAMoLn3QA6809I5vT-M7sLt9RFekBCRtR1xlEVPII7lxAYtDVi1ySvCMR0RfAOGdbjyXXs1mjrxNCDe1nNAm1PiPJcWkROmKBjh4H_0gdMW6n6NQy-eIQKGGKmXrR4k63hbeLmqb40ad7GifSmDrezyqZZCkrtZHM82EAn_r6gAGEPubCMwViEpWsTTQk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"latitude\" : \"30.733351\",\n    \"longitude\": \"76.779037\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/my-offer?page=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"my-offer"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "my-offer Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYmIxMmQ5M2E5YzRjNzY3ODlkMDZhZTY3MWE5YTNlM2RmNWY2YjkyZmVjZmU1ODRjZmFkMjg4ZDJiNTg3ODQzZTdlNmQ1ZGJmN2Y2ZTJkZGIiLCJpYXQiOjE3MDgzNTU2MjQuNjAwNDI3LCJuYmYiOjE3MDgzNTU2MjQuNjAwNDMsImV4cCI6MTczOTk3ODAyNC41OTQwMSwic3ViIjoiMTI2Iiwic2NvcGVzIjpbXX0.njVusE_yvnvj1foTXizy9zUjOwJKpPCTzC4ifV6hoxwQaBFDPHafB3T1_hECMkzHnR7m2ouqeYgUebbczC-Tu3AGVV3HCfhKiYGl9RlcGQsu8blgkGaQShycIM62ok-7wymW1KR5hJ9wXj4PGwPywqJrlRbM8jBHO2wz2MALsGAO2AlRykKulN_O2MYt6WgPLbHhWWXYeUrfrzwjnZ1Xx2SMlEUSIGUf8jwUFRwoeLBkzWtduRoFwI-5au9lrH1akPhRfVTVTB6I343xpwRBsEDrz4A7VEILITHVAuo7iuGH43cFwXK0lZ4TIuKeKHCOmdI3KJmj-VexOvr5lYEsPVwCHVYZGhdR19tR9uzPzGj3okP1TDk7cu7NYDNMzf5_LiUUYAuVSwhBBlYnaphm7n-2AFqIUfgzR4JKRvw5PNmKtN-Kq1qqteJnhONabDfoMZxEmiC-2biN3UipJqYQ-dK0MkRL6RW57DQuGeWz4jYj4C2pE1P1xfBId-X__J5pxKmwls3HCkvn9V1DfXztc3FRdWdQjEAKxDmUa2nnSdww688h8NiDC1r9NG9iUNF-0ExDXH1D9NsMVKpJFUPz0JRRoSHhm7hkeMtX_38rkllXfge6_kIvXJA6LH3gKJ7OIcfvILfDj_SbIxJSg1WwEQ9ibjKHJZnw-Ta3GRleCwM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"latitude\" : \"30.733351\",\n    \"longitude\": \"76.779037\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/my-referal-list?page=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"my-referal-list"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Merchant List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOTdiMDY1ZTNhZmM5YmEzMjhlN2I4MTIzMzU1ODRiYzBmYTZkYjk4MTU3MGUwNjdkMWI5ZTJmMjBhNGUzNzYxNTNiMTg5ZTlmYzdmYjhiZWIiLCJpYXQiOjE3MDYxMDUwNDcuOTczMTQxLCJuYmYiOjE3MDYxMDUwNDcuOTczMTQ0LCJleHAiOjE3Mzc3Mjc0NDcuOTY4MTg4LCJzdWIiOiIxMDciLCJzY29wZXMiOltdfQ.AlWGFVB6cl9B0_hmFLdYozyT7uUncMI3hHSy9cTmVaK7Y-3jN_Yu74cAq--2ATN1LQjWr3sg9sjltxzgiujaHcndG1ApWP3RneNYvNCEK6PUt6e-bT6k5j94gHUMq6lxkiz1F6muvG7c1ZZMXZF8K4Po7KKPR8Yy6Yf7vzL5ti2gf2kvJ9JnGUFNYW-XHtMJlnypOOJKy8DJoSrFgr4NycktJXoXgNn_-72YEppvhXWLlr3wW4Ksjb5v9fkrhN4G2Vn11M9FbA-UFOWzmVqC-lbm9UeAFt_I0vb4SW2x3g_m2ctWCKQrXR_FAZ5Ww9-Y_xEXmYhYrPVzsR0Rp4XZEdw3Bm_GOt5lm72ymzGPFb1EnjF5ksLg9ZBYGsXeOqlK1wrf_siY1DLggxMGmV-C_Q4mUuXcU7lvP1jiYiWMrrLDIwHQW4wfzk9nfghNyGdFxWsihT0eZjhdQajA1DT8rIAED4Mb0U1aMLID-HGwP7HwIAoWUt2hC40IvI6ZV8rS6vxQ8fqyx2fn-4kzrtl19GlRHSiHsMYiTgyV3MmkDe411QieIAPXGnYbegw-wTWc373HMSBgkkdMtJ19b9ZvT7bUX5xQGvB_k161x-ge-8XOj1Y-IT0d3Ou486YwqZ_3HaAiv_5j9zLpxe6jxuMbZqBBM-uAOI63NNEjPtYUlDc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"latitude\" : \"30.733351\",\n    \"longitude\": \"76.779037\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/merchant",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"merchant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Merchant Detail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOTdiMDY1ZTNhZmM5YmEzMjhlN2I4MTIzMzU1ODRiYzBmYTZkYjk4MTU3MGUwNjdkMWI5ZTJmMjBhNGUzNzYxNTNiMTg5ZTlmYzdmYjhiZWIiLCJpYXQiOjE3MDYxMDUwNDcuOTczMTQxLCJuYmYiOjE3MDYxMDUwNDcuOTczMTQ0LCJleHAiOjE3Mzc3Mjc0NDcuOTY4MTg4LCJzdWIiOiIxMDciLCJzY29wZXMiOltdfQ.AlWGFVB6cl9B0_hmFLdYozyT7uUncMI3hHSy9cTmVaK7Y-3jN_Yu74cAq--2ATN1LQjWr3sg9sjltxzgiujaHcndG1ApWP3RneNYvNCEK6PUt6e-bT6k5j94gHUMq6lxkiz1F6muvG7c1ZZMXZF8K4Po7KKPR8Yy6Yf7vzL5ti2gf2kvJ9JnGUFNYW-XHtMJlnypOOJKy8DJoSrFgr4NycktJXoXgNn_-72YEppvhXWLlr3wW4Ksjb5v9fkrhN4G2Vn11M9FbA-UFOWzmVqC-lbm9UeAFt_I0vb4SW2x3g_m2ctWCKQrXR_FAZ5Ww9-Y_xEXmYhYrPVzsR0Rp4XZEdw3Bm_GOt5lm72ymzGPFb1EnjF5ksLg9ZBYGsXeOqlK1wrf_siY1DLggxMGmV-C_Q4mUuXcU7lvP1jiYiWMrrLDIwHQW4wfzk9nfghNyGdFxWsihT0eZjhdQajA1DT8rIAED4Mb0U1aMLID-HGwP7HwIAoWUt2hC40IvI6ZV8rS6vxQ8fqyx2fn-4kzrtl19GlRHSiHsMYiTgyV3MmkDe411QieIAPXGnYbegw-wTWc373HMSBgkkdMtJ19b9ZvT7bUX5xQGvB_k161x-ge-8XOj1Y-IT0d3Ou486YwqZ_3HaAiv_5j9zLpxe6jxuMbZqBBM-uAOI63NNEjPtYUlDc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/merchant/107",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"merchant",
+								"107"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "State List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API_URL}}/state",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"state"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "City List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{API_URL}}/city/1",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"city",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "WEB",
+			"item": [
+				{
+					"name": "Admin Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{WEB_URL}}/admin/auth/login",
+							"host": [
+								"{{WEB_URL}}"
+							],
+							"path": [
+								"admin",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Video Upload",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/vivek/Downloads/file_example_MP4_480_1_5MG.mp4"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{WEB_URL}}/file/video/upload",
+							"host": [
+								"{{WEB_URL}}"
+							],
+							"path": [
+								"file",
+								"video",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "File Delete",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file_path",
+									"value": "file/video/vhNK9YeUwdFH3DKCYLPkqCxXULCPGgJHQ576z8nm.mp4",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{WEB_URL}}/file/delete",
+							"host": [
+								"{{WEB_URL}}"
+							],
+							"path": [
+								"file",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "WEB_URL",
+			"value": "https://devapi.scash.shop/api/web/v1",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "API_URL",
+			"value": "https://devapi.scash.shop/api/v1",
+			"type": "string"
+		},
+		{
+			"key": "image",
+			"value": ""
+		}
+	]
+}

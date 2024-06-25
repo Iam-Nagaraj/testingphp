@@ -1,0 +1,17 @@
+{
+  "menu": [
+    {
+      "url": "/dashboard",
+      "name": "Dashboards",
+      "icon": "menu-icon tf-icons mdi mdi-home-outline",
+      "slug": "dashboard"
+    },
+    {
+      "url": "/cashback/list",
+      "name": "Cashback",
+      "icon": "menu-icon tf-icons mdi mdi-table",
+      "slug": "merchant.cashback"
+    }
+  
+  ]
+}

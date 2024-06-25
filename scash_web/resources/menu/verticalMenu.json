@@ -1,0 +1,92 @@
+{
+  "menu": [
+    {
+      "url": "/dashboard",
+      "name": "Dashboards",
+      "icon": "menu-icon tf-icons mdi mdi-home-outline",
+      "slug": "dashboard"
+    },
+    {
+      "url": "/user",
+      "name": "Users",
+      "icon": "menu-icon tf-icons mdi mdi-table",
+      "slug": "admin.user"
+    },
+    {
+      "url": "/merchant",
+      "name": "Merchants",
+      "icon": "menu-icon tf-icons mdi mdi-table",
+      "slug": "admin.merchant"
+    },
+    {
+      "url": "/business-category",
+      "name": "Business Category",
+      "icon": "menu-icon tf-icons mdi mdi-table",
+      "slug": "admin.business-category"
+    },
+    {
+      "url": "/business-type",
+      "name": "Business Type",
+      "icon": "menu-icon tf-icons mdi mdi-table",
+      "slug": "admin.business-type"
+    },
+    {
+      "url": "/cashback/list",
+      "name": "Cashback",
+      "icon": "menu-icon tf-icons mdi mdi-table",
+      "slug": "admin.cashback"
+    },
+    {
+      "url": "/platform-fee/list",
+      "name": "Platform Fee",
+      "icon": "menu-icon tf-icons mdi mdi-table",
+      "slug": "admin.platform-fee"
+    },
+    {
+      "url": "/state",
+      "name": "States",
+      "icon": "menu-icon tf-icons mdi mdi-table",
+      "slug": "admin.state"
+    },
+    {
+      "url": "/city",
+      "name": "City",
+      "icon": "menu-icon tf-icons mdi mdi-table",
+      "slug": "admin.city"
+    },
+    {
+      "name": "Configurations",
+      "icon": "menu-icon tf-icons mdi mdi-lock-open-outline",
+      "slug": "admin.configuration",
+      "submenu": [
+        {
+          "url": "/configuration/walkthrough/video",
+          "name": "Walkthrough",
+          "slug": "admin.configuration.walkthrough.video",
+          "slug1": "admin.configuration.walkthrough.screen"
+
+          
+        }
+      ]
+    },
+    {
+      "name": "Cms",
+      "icon": "menu-icon tf-icons mdi mdi-lock-open-outline",
+      "slug": "admin.cms",
+      "submenu": [
+        {
+          "url": "/cms/privacy-policy",
+          "name": "Privacy Policy",
+          "slug": "admin.cms.privacy-policy"
+          
+        },
+        {
+          "url": "/cms/term-condition",
+          "name": "Term Condition",
+          "slug": "admin.cms.term-condition"
+        }
+      ]
+    }
+  
+  ]
+}

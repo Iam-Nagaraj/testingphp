@@ -1,0 +1,1 @@
+<script src="{{ asset('assets') }}/js/admin/configuration.js"></script>
