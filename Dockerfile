@@ -5,7 +5,7 @@ FROM php:7.2-apache
 RUN docker-php-ext-install mysqli
 
 # Optionally, copy your PHP application files into the container
-# COPY ./path/to/your/application /html
+ COPY cp /var/lib/jenkins/workspace/test_php/target/php-java-app-1.0.0.jar nginx-container:/var/www/html
 
 # Expose port 80 to allow incoming traffic
 EXPOSE 80
